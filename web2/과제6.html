@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset = "UTF-8">
+       <title>navigation bar</title>
+       <style>
+           @font-face {font-family:'NanumGothic';
+                    src: url('images/NanumGothic.eot');
+                    src: url('images/NanumGothic.eot?#iefix') format('embedded-opentype'),
+                         url('images/NanumGothic.woff') format('woff'),
+                         url('images/NanumGothic.ttf') format('truetype');
+                    font-weight: normal;
+                    font-style: normal;}
+           ul{
+               list-style-type: none;
+               height: 140px;
+               margin: 0;
+               padding:0;
+               width: 100%;
+               background-repeat: no-repeat;
+               background-image: url("https://github.com/kmu-leeky/kmu-cs-web-client-2017-01-homework-2/blob/master/nav-bar-bg.png?raw=true");
+              }
+           li a{
+	           color:#483535;
+	           font-weight: 700;
+               font-size:20px;
+               font-family : 'NanumGothic';
+               display:inline;
+               margin:1%;
+               float: left;
+           }
+           li a:hover{
+               cursor: url(https://github.com/kmu-leeky/kmu-cs-web-client-2017-01-homework-2/blob/master/hover-icon.png?raw=true), auto;
+           }
+       </style>
+   </head>
+   <body>
+       <ul>
+           <li><a href="#intro">축제소개</a></li>
+          	<li><a href="#festival">행사소개</a></li>
+           <li><a href="#tour">관광정보</a></li>
+           <li><a href="#coupon">할인쿠폰</a></li>
+           <li><a href="#direction">오시는길</a></li>
+           <li><a href="#tips">알아두면좋아요</a></li>
+       </ul>
+   </body>
+</html>
