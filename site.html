@@ -1,1079 +1,832 @@
 <!DOCTYPE html>
-
 <html>
-
     <head>
-
         <meta charset="UTF-8">
-
         <title>Medium - aplace to read and write big ideas and important stories</title>
-
         <style type="text/css">
-
-            input[type="email"]{
-
-				width: 300px;
-
-                height:38px;
-
-                background: #fff;
-
-                margin-bottom: 20px;
-
-               	color: rgba(0, 0, 0, 0.75);
-
-        		font-size:18px;
-
+            input[type="medium"]{
+                width: 0px;
+                height:25px;
+                font-size:14px;
+                margin:18px 0px;
+                background-color: #fff;
                 border: 0px solid #ccc;
-
-				border-bottom: 1px solid gray;
-
+                color: rgba(0, 0, 0, 0.4);
             }
-
-			input[type="submit"]{
-
-				box-sizing: border-box;
-
-                border-radius : 5px;
-
-				-webkit-box-sizing: border-box;
-
-				-moz-box-sizing: border-box;
-
+            input[type="text"]{
+				width: 300px;
                 height:38px;
-
-				width: 88px;
-
-				background: rgba(0,0,0,0.84);
-
-				border-top-style: none;
-
-				border-right-style: none;
-
-				border-left-style: none;
-
-				color: #fff;
-
-			}
-
-            input[type="submit"]:hover{
-
-                cursor: pointer;
-
-               	background: rgba(0,0,0,1);
-
+                background-color: #fff;
+                margin-bottom: 20px;
+               	color: rgba(0, 0, 0, 0.75);
+        		font-size:18px;
+                border: 0px solid #ccc;
+				border-bottom: 1px solid gray;
             }
-
-		</style>
-
-        <style>
-
-            html, body { margin: 0; padding: 0; height: 100%; width:100%; }
-
-            header{
-
-                width: 100%; height: 52px;
-
-                display:inline-block;
-
-                padding:0px 0px;
-
-            }
-
-           	.logo{
-
-                position:absolute;
-
-                left:240px;
-
-            }
-
-            .search_Icon{
-
-                margin:13px 0px;
-
-                position:absolute;
-
-                right:480px;
-
-            }
-
-            .search_Icon,.logo,.become,.Sign,.box:hover{
-
-                cursor: pointer;
-
-            }
-
-            .become{
-
-                font-size:14px;
-
-               	margin: 18px 0px;
-
-                position:absolute;
-
-                right:325px;
-
-                color: rgba(0, 0, 0, 0.4);
-
-            }
-
-            .become:hover{
-
-                cursor: pointer;
-
-                color: rgba(0,0,0,0.7);
-
-            }
-
-           	.Sign{
-
-                font-size:14px;
-
-               	margin: 18px 0px;
-
-                position:absolute;
-
-                right:260px;
-
-                color:#03A87C;
-
-            }
-
-            .Sign:hover{color:#018F69;cursor: pointer;}
-
-            .Last_ment:hover{
-
-                cursor: pointer;
-
-                color:#018F69;
-
-            }
-
-            .box {
-
-                background:#FFFFFF;
-
-				border-style : solid;
-
-				border-color : #03A87C;
-
-				border-width : 1px;
-
-                font-size:14px;
-
-                padding-top:7px;
-
-				margin: 12px 0px;
-
-                text-align:center;
-
-                position:absolute;
-
-                color:#03A87C;
-
-                right:120px;
-
-                width:110px;
-
-                height:28px;
-
+			input[type="submit"]{
+				box-sizing: border-box;
                 border-radius : 5px;
-
-				}
-
-            .box:hover{
-
-                border-color : #018F69;
-
-               	color:#018F69;
-
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+                height:38px;
+				width: 88px;
+				background-color: rgba(0,0,0,0.84);
+				border-top-style: none;
+				border-right-style: none;
+				border-left-style: none;
+				color: #fff;
+			}
+            input[type="submit"]:hover{
+                cursor: pointer;
+               	background-color: rgba(0,0,0,1);
             }
-
-            nav{
-
-                position:absolute;
-
-				top:52px;
-
+		</style>
+        <style>
+            html, body { margin: 0; padding: 0; height: 100%; width:100%; }
+            header{
+                width: 100%; height: 52px;
+                display:inline-block;
                 padding:0px 0px;
-
-                width:100%; height: 50px;
-
-                text-align:center;
-
             }
-
-            .Long{
-
+           	.logo{
                 position:absolute;
-
-               	top:112px;
-
-                height:395px; width:100%;
-
-                display:inline-block
-
+                left:240px;
             }
-
-            .Long>.First{
-
+            .search_Icon{
+                background: url("https://drive.google.com/uc?export=download&id=1piVQUPHIAOoNKaU78bbGLhhQPqS5B6Ap") no-repeat;
+                width: 34px;
+                height: 34px;
+                border: none;
+                margin:11px 0px;
                 position:absolute;
-
-                left:150px;
-
-                width:448px;
-
-
-
+                right:480px;
+                z-index: 10;
             }
-
-            hr.cut{
-
+            .search_Icon,.logo,.become,.Sign,.box:hover{
+                cursor: pointer;
+            }
+            .search_window{
+                height: 34px;
+                width:160px;
+                right: 495px;
                 position:absolute;
-
-				top:537px;
-
-                width:1140px;
-
-                left:220px;
-
-                color:rpga(0,0,0,0.4);
-
             }
-
-            .search{
-
+            .become{
+                font-size:14px;
+               	margin: 18px 0px;
                 position:absolute;
-
-               	top:547px;
-
-                height:270px; width:100%;
-
-                text-align:left;
-
-            }
-
-            .search>.middle{
-
-               	position:absolute;
-
-                width:1140px;
-
-                left:220px;
-
-                margin-top:15px;
-
-                height: 235px;
-
-                background:#FAFAFA;
-
-                display:inline-block;
-
-            }
-
-            .search_ment{
-
-                margin-top: 60px;
-
-				margin-left : 250px;
-
-                font-family: Georgia, sans-serif;
-
-        		font-size:42px;
-
-            }
-
-            .middle>.image{
-
-            	float:left
-
-            }
-
-            .behind{
-
-                position:absolute;
-
-               	top:847px;
-
-                display:inline;
-
-            }
-
-            .behind>.right{
-
-                position:absolute;
-
-                left:950px;
-
-                float:left;
-
-    			top:30px;
-
-                width:448px;
-
-            }
-
-            .left{
-
-                float:left;
-
-                width:680px;
-
-                position: absolute;
-
-                left:220px;
-
-            }
-
-            ul{
-
-                list-style-type: none;
-
-        		height : 50px; width: 100%;
-
-            }
-
-            li{
-
-                display:inline;
-
-            }
-
-            li a{
-
-                list-style-type: none;
-
+                right:325px;
+                height:38px;
                 color: rgba(0, 0, 0, 0.4);
-
-                padding: 0px 10px 0px 10px;
-
-                text-decoration: none;
-
-                font-family: Consolas, sans-serif;
-
-        		font-size:17px;
-
+                background-color: rgba(0,0,0,0);
+                
             }
-
-            li:nth-child(1) a {
-
-      			color:rgba(0, 0, 0, 0.2);
-
-    		}
-
-    		li:nth-child(2) a {
-
-      			color: black;
-
-    		}
-
-            li:nth-child(15) a {
-
-      			color: rgba(0, 0, 0, 0.7);
-
-    		}
-
-            li a:hover {
-
-        		color: black;
-
-    		}
-
-            .title{
-
-                font-style:bold;
-
-                font-size:24px;
-
-            }
-
-            .First_title{
-
-                float:left;
-
-                position:absolute;
-
-                left:100px;
-
-            }
-
-            .Last{
-
-                float:left;
-
-                position:absolute;
-
-                left:1000px;
-
-            }
-
-            .First_title{
-
-                float:left;
-
-                position:absolute;
-
-                left:100px;
-
-            }
-
-            .Mid{
-
-                float:left;
-
-                position:absolute;
-
-                left:620px;
-
-            }
-
-            span {
-
-				display : block;
-
-				width : 300px;
-
-                height: auto;
-
-            }
-
-            .content{
-
-                font-size:16px;
-
-                color:rgba(0,0,0,0.4);
-
-            }
-
-            .Name:hover{
-
+            .become:hover{
                 cursor: pointer;
-
-                text-decoration: underline;
-
+                color: rgba(0,0,0,0.7);
             }
-
-            .other:hover{
-
-                cursor: pointer;
-
-                text-decoration: underline;
-
-            }
-
-            div div{
-
-                float:left;
-
-                display:inline-block;
-
-				height : 135px;
-
-                width: 135px;
-
-            }
-
-            .Last_ment{
-
+           	.Sign{
+                font-size:14px;
+               	margin: 18px 0px;
                 position:absolute;
-
-                top:400px;
-
-                left:1200px;
-
-                font-size: 15px;
-
+                right:260px;
+                height:38px;
                 color:#03A87C;
-
+                background-color: rgba(0,0,0,0);
             }
-
-            .Featured{
-
-                float:left;
-
+            .Sign:hover{color:#018F69;cursor: pointer;}
+            .Last_ment:hover{
+                cursor: pointer;
+                color:#018F69;
+            }
+            .box {
+                background-color:#FFFFFF;
+				border-style : solid;
+				border-color : #03A87C;
+				border-width : 1px;
+                font-size:14px;
+                padding-top:7px;
+				margin: 12px 0px;
+                text-align:center;
+                position:absolute;
+                color:#03A87C;
+                right:120px;
+                width:110px;
+                height:28px;
+                border-radius : 5px;
+				}
+            .box:hover{
+                border-color : #018F69;
+               	color:#018F69;
+            }
+            nav{
+                position:absolute;
+				top:52px;
+                padding:0px 0px;
+                width:100%; height: 50px;
+                text-align:center;
+            }
+            .Long{
+                position:absolute;
+               	top:112px;
+                height:395px; width:100%;
+                display:inline-block
+            }
+            .Long>.First{
+                position:absolute;
+                left:150px;
+                width:448px;
+            }
+            hr.cut{
+                position:absolute;
+				top:537px;
+                width:1140px;
+                left:220px;
+                color:rpga(0,0,0,0.4);
+            }
+            .search{
+                position:absolute;
+               	top:547px;
+                height:270px; width:100%;
+                text-align:left;
+            }
+            .search>.middle{
+               	position:absolute;
+                width:1140px;
+                left:220px;
+                margin-top:15px;
+                height: 235px;
+                background:#FAFAFA;
+                display:inline-block;
+            }
+            .search_ment{
+                margin-top: 60px;
+				margin-left : 250px;
+                font-family: Georgia, sans-serif;
+        		font-size:42px;
+            }
+            .middle>.image{
+            	float:left
+            }
+            .behind{
+                position:absolute;
+               	top:847px;
                 display:inline;
-
             }
-
-            table{
-
+            .right{
+                position:absolute;
+                left:950px;
                 float:left;
-
+    			top:30px;
+                width:448px;
             }
-
+            .left{
+                float:left;
+                width:680px;
+                position: absolute;
+                left:220px;
+            }
+            .menu{
+                background-color:#FFFFFF;
+        		height : 50px; width: 100%;
+            }
+            li{
+                list-style-type: none;
+        		height : 50px; width: 100%;
+                display:inline;
+            }
+            li a{
+                list-style-type: none;
+                color: rgba(0, 0, 0, 0.4);
+                padding: 0px 10px 0px 10px;
+                text-decoration: none;
+                font-family: Consolas, sans-serif;
+        		font-size:17px;
+            }
+            li:nth-child(1) a {
+      			color:rgba(0, 0, 0, 0.2);
+    		}
+    		li:nth-child(2) a {
+      			color: black;
+    		}
+            li:nth-child(15) a {
+      			color: rgba(0, 0, 0, 0.7);
+    		}
+            li a:hover {
+        		color: black;
+    		}
+            .title{
+                font-style:bold;
+                font-size:24px;
+            }
+            .First_title{
+                float:left;
+                position:absolute;
+                left:100px;
+            }
+            .Last{
+                float:left;
+                position:absolute;
+                left:1000px;
+            }
+            .First_title{
+                float:left;
+                position:absolute;
+                left:100px;
+            }
+            .Mid{
+                float:left;
+                position:absolute;
+                left:620px;
+            }
+            span {
+				display : block;
+				width : 300px;
+                height: auto;
+            }
+            .content{
+                font-size:16px;
+                color:rgba(0,0,0,0.4);
+            }
+            .Name:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            .other:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            div div{
+                float:left;
+                display:inline-block;
+				height : 135px;
+                width: 135px;
+            }
+            .Last_ment{
+                position:absolute;
+                top:400px;
+                left:1200px;
+                font-size: 15px;
+                color:#03A87C;
+            }
+            .Featured{
+                float:left;
+                display:inline;
+            }
+            table{
+                float:left;
+            }
             .Fir{
-
                	font-size:14px;
-
                 float:left; width:500px;
-
   			}
-
+            .menuFixed {
+                position: fixed;
+                top: 0px;
+                z-index: 1000;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+              }
+            .rightFixed {
+                position: fixed;
+                top: 70px;
+                z-index: 100;
+              }
+            .search_mentChange {
+                margin-top: 40px;
+              }
+            .warning{
+                position:absolute;
+                top:185px;
+                left:250px;
+                display: inline;
+                font-size:14px;
+                color:#CC5454;
+            }
+            .arrow_box {
+            	display: none;
+             	position: absolute;
+             	padding: 8px;
+                width: 87px;
+             	left: 40%;
+             	-webkit-border-radius:10px;
+             	-moz-border-radius:10px;
+             	border-radius: 8px;
+             	background: #333;
+             	color: #fff;
+             	font-size: 12px;
+                margin-top:-50%;
+            }
+            .arrow_box:after {
+            	content: '';
+                position: absolute;
+                border-top: 10px solid #333;
+                border-right: 5px solid transparent;
+                border-left: 5px solid transparent;
+                top: 100%;
+                pointer-events: none;
+                margin-left: -7px;
+                left: 50%;
+            }
+            .time{
+                display: block;
+            }
+            .time:hover + .arrow_box {
+              display: block;
+            }
         </style>
-
+         <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var jbOffset = $( '.menu' ).offset();
+                $( window ).scroll( function() {
+                    if ( $( document ).scrollTop() > jbOffset.top ) {
+                        $( '.menu' ).addClass( 'menuFixed' );
+                    } 
+                    else {
+                        $( '.menu' ).removeClass( 'menuFixed' );
+                    }
+           		});
+			});
+            $(document).ready(function(){
+                var RightOffset = $( '.right' ).offset();
+                $( window ).scroll( function() {
+                    if ( $( document ).scrollTop() > RightOffset.top ) {
+                        $( '.right' ).addClass( 'rightFixed' );
+                    }
+                    else {
+                        $( '.right' ).removeClass( 'rightFixed' );
+                    }
+           		});
+			});
+        </script>
+        <script type="text/javascript">
+            function check(){
+                var email=document.getElementById("email").value;
+                var Exemail = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+                if(Exemail.test(email)==false){
+                    $( '.search_ment' ).addClass( 'search_mentChange' );
+                    $( ".warning" ).append( "Please enter a valid email address." );
+                }
+                else{
+                    window.location.reload();
+                }
+            }
+        </script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.search_Icon').click(function(){
+                	var location=$(".search_Icon").css("right");
+                    if (location!="480px"){
+                        var email=document.getElementById("tx").value;
+                        if (email.length==0){
+                            $('.search_Icon').animate({right:480},800);
+                            $('input[type="medium"]').animate({width:0,opacity:0},800);
+                            $( '.search_window' ).empty();
+                        }
+                    }
+                    else{
+                        count=false;
+                        $('.search_Icon').animate({right:660},800);
+                        $( '.search_window' ).append('<input type="medium" placeholder="Search Medium" id="tx">');
+                        $('input[type="medium"]').animate({width:195,opacity:1},800);
+                    }
+                });
+           	});
+        </script>
     </head>
-
     <body>
-
         <header>
-
             <div class="logo">
-
             <img src="https://t3.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/Nst/image/j0wQGvkCx1_17O4-Snun5soZVmg.png" height="52"; width="128">
-
             </div>
-
-        	<div class= "search_Icon">
-
-                <img src="https://drive.google.com/uc?export=download&id=14IH1AbLDZ_A4A5Am6aNrK-g8WXM-YCvk">
-
+        	<div>
+                <button type="button" class= "search_Icon">
+                </button></div>
+            <div class= "search_window">
+                
             </div>
-
         	<div class="become">
-
                 Become a memeber
-
             </div>
-
             <div class="Sign">
-
                 Sign up
-
             </div>
-
             <div class="box">
-
                 Get started
-
             </div>
-
         </header>
-
         <nav class="menu">
-
         	<ul>
-
             	<li><a href="#left"><</a></li>
-
         		<li><a href="#home">HOME</a></li>
-
       			<li><a href="#onezero">ONEZERO</a></li>
-
       			<li><a href="#elemental">ELEMENTAL</a></li>
-
       			<li><a href="#heated">HEATED</a></li>
-
       			<li><a href="#tech">TECH</a></li>
-
       			<li><a href="#startups">STARTUPS</a></li>
-
       			<li><a href="#self">SELF</a></li>
-
       			<li><a href="#politics">POLITICS</a></li>
-
       			<li><a href="#health">HEALTH</a></li>
-
       			<li><a href="#self">SELF</a></li>
-
       			<li><a href="#design">DESIGN</a></li>
-
       			<li><a href="#homan parts">HOMAN PARTS</a></li>
-
       			<li><a href="#more">MORE</a></li>
-
         		<li><a href="#right">></a></li>
-
         </ul>
-
     	</nav>
-
         <section class="Long">
-
             <div class="First">
-
                 <span><img src="https://drive.google.com/uc?export=download&id=17o-7HxqTIb5hIf_KRfDgWNuAU8mm-jkj" width="448px";></span>
-
                 <div class="title">
-
                     	<div class="First_title">
-
                             <span><Strong>Meet the Word's Most Bio-Tracked Man</Strong></span>
-
                         	<span style="font-size:14px; color:rgba(0,0,0,0.6);">Scientist Michael Snyder tracked his own basic measurements for years.
-
                     		Now he's released a study of over 100 people using similar data to...</span>
-
                             <span style="font-size:14px;">
-
                             <br>
-
                         	<a class="Name">Dana G Smith</a>
-
                 			in
-
                 			<a class="other">OneZero</a>
-
                             </span>
-
-                            <span style="font-size:14px; color= rgba(0,0,0,0.4);">
-
-                            <img src="https://drive.google.com/uc?export=download&id=1l0cEJYwfPbhJytXzjlgMSJjJCoNlzb9_" height="17px";></span>
-
+                            <span class="time">
+                                <img src="https://drive.google.com/uc?export=download&id=1l0cEJYwfPbhJytXzjlgMSJjJCoNlzb9_" height="17px";>
+                           	</span>
+                            <p class="arrow_box">Updated May 6</p>
                     	</div>
-
                 </div>
-
             </div>
-
             <div class="Mid">
-
                	<article>
-
                     <div>
-
                         <img src="https://drive.google.com/uc?export=download&id=1ML9UK1D_LROpIBKm2FIkLp2qKaui4roI">
-
                     </div>
-
                     <div>
-
                         <span><Strong>Google's Most Interesting I/O Announcements, Ranked</Strong></span>
-
                             <span style="font-size:14px;">
-
                             <br>
-
                         	<a class="Name">Will Oremus</a>
-
                 			in
-
                 			<a class="other">OneZero</a>
-
                             </span>
-
                             <span>
-
                             <img src="https://drive.google.com/uc?export=download&id=1jMjWpQtOFILqlnXlLTEMoOd6yu4FiVx4" height="17px";></span>
-
                     </div>
-
                 </article>
-
                 <article>
-
                     <div>
-
                         <img src="https://drive.google.com/uc?export=download&id=1PgnHnofcgVT3WDJmyzGcwlQVGMwcmTLV">
-
                     </div>
-
                     <div>
-
                         <span><Strong>Sex with Robots Was Never<br> the Point</Strong></span>
-
                         <span style="font-size:14px; color:rgba(0,0,0,0.6);">
-
                             why are we so obsessed with <br>screwing...
-
                         </span>
-
                         <span style="font-size:14px;color:rgba(0,0,0,1);">
-
                             <br>
-
                         	<a class="Name">Will Oremus</a>
-
                 			in
-
                 			<a class="other">OneZero</a>
-
                         </span>
-
                         <span>
-
                         <img src="https://drive.google.com/uc?export=download&id=1aY1J7oeW6FHjl7PSl-r_S-lQ8Dn9Me71" height="17px";></span>
-
                    </div>
-
                 </article>
-
                 <article>
-
                     <div>
-
                         <img src="https://drive.google.com/uc?export=download&id=1EcySuJmAfht2rsszA7O71zuvz04CzHR7">
-
                     </div>
-
                     <div>
-
                         <span><Strong>How to Be an Ethical<br>Influencer</Strong></span>
-
                         <span style="font-size:14px; color:rgba(0,0,0,0.6);">
-
                             In a role that's often tagged as<br> disingen...
-
                         </span>
-
                         <span style="font-size:14px;color:rgba(0,0,0,1);">
-
                             <br>
-
                         	<a class="Name">Erin Lowry</a>
-
                         </span>
-
                         <span>
-
                         <img src="https://drive.google.com/uc?export=download&id=1p_vfRNZcWwBtebcrHd0fZPU0n68Z1wZs" height="17px";></span>
-
                     </div>
-
             </article>
-
             </div>
-
             <div class="Last">
-
                 <span><img src="https://drive.google.com/uc?export=download&id=1xwF9nXnKcZvAfXXcFKeYSPYTDCIM7XF5" height="152px";></span>
-
                 <div class="title">
-
                             <span><Strong>Meet the People Trading Their Anti-Anxiety Meds in...</Strong></span>
-
                         	<span style="font-size:14px; color:rgba(0,0,0,0.6);">Anxiety isn't a qualifying condition for ...</span>
-
                             <span style="font-size:14px;">
-
                             <br>
-
                         	<a class="Name">Ashley Laderer</a>
-
                 			in
-
                 			<a class="other">Elemental</a>
-
                             </span>
-
                             <span style="font-size:14px; color= rgba(0,0,0,0.4);">
-
                             <img src="https://drive.google.com/uc?export=download&id=1btb_MAa_Dr3m5jENPyz4FgrWnWSg9ScW" height="19px";></span>
-
                 </div>
-
             </div>
-
             <div class="Last_ment">
-
                 SEE ALL FEATURED >
-
             </div>
-
         </section>
-
         <hr class="cut">
-
         <section class="search">
-
             <article class= "middle">
-
                 <div class="image">
-
                     <img src="https://drive.google.com/uc?export=download&id=1FqVzYl09K2OWlMKEA7v8Cj3ojlOUnAEJ" height= "235px";>
-
                 </div>
-
                 <div class="search_ment">
-
                     <strong>Never miss a story</strong>
-
                     <p style="font-family: Arial; font-size:17.5px; color:gray;">
-
                     Sign up for Medium’s Daily Digest and get the best of Medium, tailored for you.
-
                 	</p>
-
-                    <form>
-
-                        <input type="email" placeholder="Email Address">
-
-						<input type="submit" value="Sign up"><br><br>
-
-                    </form>
-
+                    <form onsubmit="check();">
+                         <input type="text" placeholder="Email Address" id="email"/>
+                         <input type="submit" value="Sign up">
+                   </form>
+                    <p class="warning"></p>
                 </div>
-
             </article>
-
         </section>
-
         <section class="behind">
-
             <div class="left">
-
                 <img src="https://drive.google.com/uc?export=download&id=1clV2HjGpV3p4d_X7GUNewel_PpoR6V5d"width="680px";>
-
                 <img src="https://drive.google.com/uc?export=download&id=1WKqItm1qmcROslrLLsqPEwq-n8WY0MaO" width="680px";>
-
                 <span>
-
                 <div class="Featured">
-
                     <table>
-
                         <tbody><tr><td class="Fir">
-
                             	<span class="title"style="font-size:22px;">
-
                                     <Strong>Rebranding My Mom</Strong>
-
                             	</span>
-
                                     <span class="content">On parents,layoffs,and resume templates</span>
-
                             	<span>
-
                                 <br>
-
                                 <a class="Name">Harris Sockel</a>
-
                                 in
-
                                 <a class="other">Human Parts</a></span>
-
                                 <span>
-
                                 <img src="https://drive.google.com/uc?export=download&id=1ckDdomz-tgyGj07md5xElirKmt0Z8nY9" height="17px";></span>
-
                             </td>
-
                             <td><img src="https://drive.google.com/uc?export=download&id=1itv0QpZTlftgGilGme5Yi_8KfUWHA9dM" width="170px">
-
                             </td>
-
                             </tr>
-
                             <tr>
-
                             <td class="Fir">
-
                             	<span class="title"style="font-size:22px;">
-
                                     <Strong>The Complexities of Advocating for Survivors of Assault</Strong>
-
                             	</span>
-
                                     <span class="content">Over and over again, I witness our system's failures</span>
-
                             	<span>
-
                                 <br>
-
                                 <a class="Name">LuxAlptraum</a>
-
                                 in
-
                                 <a class="other">Human Parts</a></span>
-
                                 <span>
-
                                 <img src="https://drive.google.com/uc?export=download&id=1u99jvbZkge2Y72232hHHevAO0xcFv7HE" height="17px";></span>
-
                             </td>
-
                             <td class="Scd"><img src="https://drive.google.com/uc?export=download&id=15y3l7L89S7OmjaBraNRO5FY_IolTwwe0" width="170px">
-
                             </td>
-
                             </tr>
-
                             <tr>
-
                             <td class="Fir">
-
                             	<span class="title" style="font-size:22px;">
-
                                     <Strong>Google's Most Interesting I/O Announcements, Ranked</Strong>
-
                             	</span>
-
                                     <span class="content">Hint: The new Pixel phone isn't one of them</span>
-
                             	<span>
-
                                 <br>
-
                                 <a class="Name">Will Oremus</a>
-
                                 in
-
                                 <a class="other">OneZero</a></span>
-
                                 <span>
-
                                 <img src="https://drive.google.com/uc?export=download&id=1jMjWpQtOFILqlnXlLTEMoOd6yu4FiVx4" height="17px";></span>
-
                             </td>
-
                             <td><img src="https://drive.google.com/uc?export=download&id=1ymH1M80elqUTJtmBEqLUiJnjBDQvtbey" width="170px">
-
                             </td>
-
                             </tr>
-
                             <tr>
-
                             <td class="Fir">
-
                             	<span class="title" style="font-size:22px;">
-
                                     <Strong>Can a Hormonal Nasal Spray Help People With Autism</Strong>
-
                             	</span>
-
                                     <span class="content">A lesser known cousin of oxytocin is showing promise in early studies </span>
-
                             	<span>
-
                                 <br>
-
                                 <a class="Name">Bryson Masse</a>
-
                                 in
-
                                 <a class="other">Elemental</a></span>
-
                                 <span>
-
                                 <img src="https://drive.google.com/uc?export=download&id=1x23BMqPm5IodVfdBy6ReTI5U2cjTPqmq" height="17px";></span>
-
                             </td>
-
                             <td><img src="https://drive.google.com/uc?export=download&id=1QNYy5pmyIOu4n2bPSsVoyIz0q_mmQFHh" width="170px">
-
                             </td>
-
                             </tr>
-
                         </tbody>
-
                     </table>
-
+                    <img src="https://drive.google.com/uc?export=download&id=14IH1AbLDZ_A4A5Am6aNrK-g8WXM-YCvk"width="680px";>
+                    <img src="https://drive.google.com/uc?export=download&id=1WKqItm1qmcROslrLLsqPEwq-n8WY0MaO" width="680px";>
+                    <table>
+                        <tbody><tr><td class="Fir">
+                            	<span class="title"style="font-size:22px;">
+                                    <Strong>Rebranding My Mom</Strong>
+                            	</span>
+                                    <span class="content">On parents,layoffs,and resume templates</span>
+                            	<span>
+                                <br>
+                                <a class="Name">Harris Sockel</a>
+                                in
+                                <a class="other">Human Parts</a></span>
+                                <span>
+                                <img src="https://drive.google.com/uc?export=download&id=1ckDdomz-tgyGj07md5xElirKmt0Z8nY9" height="17px";></span>
+                            </td>
+                            <td><img src="https://drive.google.com/uc?export=download&id=1itv0QpZTlftgGilGme5Yi_8KfUWHA9dM" width="170px">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="Fir">
+                            	<span class="title"style="font-size:22px;">
+                                    <Strong>The Complexities of Advocating for Survivors of Assault</Strong>
+                            	</span>
+                                    <span class="content">Over and over again, I witness our system's failures</span>
+                            	<span>
+                                <br>
+                                <a class="Name">LuxAlptraum</a>
+                                in
+                                <a class="other">Human Parts</a></span>
+                                <span>
+                                <img src="https://drive.google.com/uc?export=download&id=1u99jvbZkge2Y72232hHHevAO0xcFv7HE" height="17px";></span>
+                            </td>
+                            <td class="Scd"><img src="https://drive.google.com/uc?export=download&id=15y3l7L89S7OmjaBraNRO5FY_IolTwwe0" width="170px">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="Fir">
+                            	<span class="title" style="font-size:22px;">
+                                    <Strong>Google's Most Interesting I/O Announcements, Ranked</Strong>
+                            	</span>
+                                    <span class="content">Hint: The new Pixel phone isn't one of them</span>
+                            	<span>
+                                <br>
+                                <a class="Name">Will Oremus</a>
+                                in
+                                <a class="other">OneZero</a></span>
+                                <span>
+                                <img src="https://drive.google.com/uc?export=download&id=1jMjWpQtOFILqlnXlLTEMoOd6yu4FiVx4" height="17px";></span>
+                            </td>
+                            <td><img src="https://drive.google.com/uc?export=download&id=1ymH1M80elqUTJtmBEqLUiJnjBDQvtbey" width="170px">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="Fir">
+                            	<span class="title" style="font-size:22px;">
+                                    <Strong>Can a Hormonal Nasal Spray Help People With Autism</Strong>
+                            	</span>
+                                    <span class="content">A lesser known cousin of oxytocin is showing promise in early studies </span>
+                            	<span>
+                                <br>
+                                <a class="Name">Bryson Masse</a>
+                                in
+                                <a class="other">Elemental</a></span>
+                                <span>
+                                <img src="https://drive.google.com/uc?export=download&id=1x23BMqPm5IodVfdBy6ReTI5U2cjTPqmq" height="17px";></span>
+                            </td>
+                            <td><img src="https://drive.google.com/uc?export=download&id=1QNYy5pmyIOu4n2bPSsVoyIz0q_mmQFHh" width="170px">
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <img src="https://drive.google.com/uc?export=download&id=1pot9cTJDQrLe75uuspZLDhU8b23tAf-S"width="680px";>
+                    <img src="https://drive.google.com/uc?export=download&id=1WKqItm1qmcROslrLLsqPEwq-n8WY0MaO" width="680px";>
+                    <table>
+                        <tbody><tr><td class="Fir">
+                            	<span class="title"style="font-size:22px;">
+                                    <Strong>Rebranding My Mom</Strong>
+                            	</span>
+                                    <span class="content">On parents,layoffs,and resume templates</span>
+                            	<span>
+                                <br>
+                                <a class="Name">Harris Sockel</a>
+                                in
+                                <a class="other">Human Parts</a></span>
+                                <span>
+                                <img src="https://drive.google.com/uc?export=download&id=1ckDdomz-tgyGj07md5xElirKmt0Z8nY9" height="17px";></span>
+                            </td>
+                            <td><img src="https://drive.google.com/uc?export=download&id=1itv0QpZTlftgGilGme5Yi_8KfUWHA9dM" width="170px">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="Fir">
+                            	<span class="title"style="font-size:22px;">
+                                    <Strong>The Complexities of Advocating for Survivors of Assault</Strong>
+                            	</span>
+                                    <span class="content">Over and over again, I witness our system's failures</span>
+                            	<span>
+                                <br>
+                                <a class="Name">LuxAlptraum</a>
+                                in
+                                <a class="other">Human Parts</a></span>
+                                <span>
+                                <img src="https://drive.google.com/uc?export=download&id=1u99jvbZkge2Y72232hHHevAO0xcFv7HE" height="17px";></span>
+                            </td>
+                            <td class="Scd"><img src="https://drive.google.com/uc?export=download&id=15y3l7L89S7OmjaBraNRO5FY_IolTwwe0" width="170px">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="Fir">
+                            	<span class="title" style="font-size:22px;">
+                                    <Strong>Google's Most Interesting I/O Announcements, Ranked</Strong>
+                            	</span>
+                                    <span class="content">Hint: The new Pixel phone isn't one of them</span>
+                            	<span>
+                                <br>
+                                <a class="Name">Will Oremus</a>
+                                in
+                                <a class="other">OneZero</a></span>
+                                <span>
+                                <img src="https://drive.google.com/uc?export=download&id=1jMjWpQtOFILqlnXlLTEMoOd6yu4FiVx4" height="17px";></span>
+                            </td>
+                            <td><img src="https://drive.google.com/uc?export=download&id=1ymH1M80elqUTJtmBEqLUiJnjBDQvtbey" width="170px">
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="Fir">
+                            	<span class="title" style="font-size:22px;">
+                                    <Strong>Can a Hormonal Nasal Spray Help People With Autism</Strong>
+                            	</span>
+                                    <span class="content">A lesser known cousin of oxytocin is showing promise in early studies </span>
+                            	<span>
+                                <br>
+                                <a class="Name">Bryson Masse</a>
+                                in
+                                <a class="other">Elemental</a></span>
+                                <span>
+                                <img src="https://drive.google.com/uc?export=download&id=1x23BMqPm5IodVfdBy6ReTI5U2cjTPqmq" height="17px";></span>
+                            </td>
+                            <td><img src="https://drive.google.com/uc?export=download&id=1QNYy5pmyIOu4n2bPSsVoyIz0q_mmQFHh" width="170px">
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
                 </div>
-
                 </span>
-
             </div>
-
+            
+            
             <div class="right">
-
                 <span class="title">
-
                     <strong>Popular on Medium</strong>
-
                 </span>
-
                 <hr style="color:gray; width:410px; position:absolute; right:34px;">
-
                 <table style="margin-top:20px;">
-
                     <tbody><tr style="height:120px;"><td style="font-size:32px; color:rgba(0,0,0,0.4); width:50px;">01</td><td>
-
                             	<span class="title"style="font-size:17px;">
-
                                     <Strong>We made $1,052,000in 2018 selling UI Tools.Here is what we learned</Strong>
-
                                 <br>
-
                                 <a class="Name" style="font-size:14px;">Alexandru Paduraru</a>
-
                                 <a style="font-size:14px;">in</a>
-
                                 <a class="other"style="font-size:14px;">freeCodeCa...</a></span>
-
                         		<span>
-
                                 <img src="https://drive.google.com/uc?export=download&id=1x23BMqPm5IodVfdBy6ReTI5U2cjTPqmq" height="17px";></span>
-
                             </td>
-
                             </tr>
-
                         <tr style="height:120px;"><td style="font-size:32px; color:rgba(0,0,0,0.4); width:50px;">02</td><td>
-
                             	<span class="title"style="font-size:17px;">
-
                                     <Strong>Why Blockchain is Not the Answer</Strong>
-
                                 <br>
-
                                 <a class="Name" style="font-size:14px;">Jimmy Song</a></span>
-
                         		<span>
-
                                 <img src="https://drive.google.com/uc?export=download&id=1x23BMqPm5IodVfdBy6ReTI5U2cjTPqmq" height="17px";></span>
-
                             </td>
-
                             </tr>
-
                         <tr style="height:120px;"><td style="font-size:32px; color:rgba(0,0,0,0.4); width:50px;">03</td><td>
-
                             	<span class="title"style="font-size:17px;">
-
                                     <Strong>What I learned after writing clojure for 424 days, straight</Strong>
-
                                 <br>
-
                                 <a class="Name" style="font-size:14px;">Shivek Khurana</a>
-
                                 <a style="font-size:14px;">in</a>
-
                                 <a class="other"style="font-size:14px;">freeCodeCa...</a></span>
-
                         		<span>
-
                                 <img src="https://drive.google.com/uc?export=download&id=1x23BMqPm5IodVfdBy6ReTI5U2cjTPqmq" height="17px";></span>
-
                             </td>
-
                             </tr>
-
                         <tr style="height:120px;"><td style="font-size:32px; color:rgba(0,0,0,0.4); width:50px;">04</td><td>
-
                             	<span class="title"style="font-size:17px;">
-
                                     <Strong>How Artificial Intelligence Is Tracking Sex Traffickers</Strong>
-
                                 <br>
-
                                 <a class="Name" style="font-size:14px;">Liz Brody</a>
-
                                 <a style="font-size:14px;">in</a>
-
                                 <a class="other"style="font-size:14px;">OneZero</a></span>
-
                         		<span>
-
                                 <img src="https://drive.google.com/uc?export=download&id=1x23BMqPm5IodVfdBy6ReTI5U2cjTPqmq" height="17px";></span>
-
                             </td>
-
                             </tr>
-
                     </tbody>
-
                 </table>
-
                 <span style="color:rgba(0,0,0,0.6);">Help Status Writers Blog Careers Terms About
-
                 </span>
-
             </div>
-
         </section>
-
     </body>
-
 </html>
